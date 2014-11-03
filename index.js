@@ -15,7 +15,8 @@ app.get("/longURL", function(request, response) {
 	var key = Math.floor(1000 * Math.random());
 	urlKeys[key] = {longURL: longURL, visits: 0};
 
-	var shortURL = "localhost:8080/r?k=" + key;
+	var domain = process.env.DOMAIN;
+	var shortURL = domain + "/r?k=" + key;
 	response.render("response.ejs", {shortURL: shortURL});
 });
 
