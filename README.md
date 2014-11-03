@@ -1,3 +1,3 @@
 # diminURL
 
-A URL shortener build suing Node.js/Express 4
+A URL shortener build with Node.js/Express 4
