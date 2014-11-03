@@ -16,7 +16,7 @@ app.get("/longURL", function(request, response) {
 	urlKeys[key] = {longURL: longURL, visits: 0};
 
 	var shortURL = "localhost:8080/r?k=" + key;
-	response.render("shortURL.ejs", {shortURL: shortURL});
+	response.render("response.ejs", {shortURL: shortURL});
 });
 
 app.get("/r", function(request, response) {
