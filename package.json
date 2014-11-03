@@ -1,7 +1,7 @@
 {
   "name": "dimin-url",
   "version": "0.1.2",
-  "description": "A sample Node.js app using Express 4",
+  "description": "a url shortener build with Node/Express",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
