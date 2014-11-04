@@ -7,8 +7,9 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "ejs": "~0.7.1",
     "express": "~4.9.x",
-    "ejs": "~0.7.1"
+    "redis": "^0.12.1"
   },
   "engines": {
     "node": "0.10.x"
