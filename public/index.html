@@ -1,15 +1,30 @@
-<html>
+<html ng-app="diminURL">
 <head>
 	<title>diminURL</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 
 	<h1>diminURL</h1>
 
-	<form method="GET" action="/longURL">
-		<button type="submit">Submit</button>
-		<input name="link" placeholder="long URL goes here"></input>
+	<form class="url-submitter" ng-submit="submit()" ng-controller="UrlSubmitter">
+		<input type="text" ng-model="link" name="link"/>
+		<h1>{{link}}</h1>	
 	</form>
+
+	<div class="results-panel" ng-controller="ResultsPanel as panel">
+		<ul class="results-list" ng-repeat="result in results">
+			<li><div>{{result.link}}</div> 
+				<div>
+					<a href={{result.shortUrl}}>
+						{{result.shortUrl}}
+					</a>
+				</div>
+			</li>
+		</ul>
+	<div>
 
 </body>
 </html>
