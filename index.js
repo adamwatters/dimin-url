@@ -49,7 +49,7 @@ app.get("/r", function(request, response) {
 });
 
 var setNewKey = function(url, callback) {
-	var key = Math.floor(Math.random() * 100000);
+	var key = Math.random().toString(36).substr(2, 5);
 
 	redis.setnx(key, url, function(error, keySet){
 		if (error) {
